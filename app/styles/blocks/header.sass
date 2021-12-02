@@ -1,0 +1,57 @@
+.header
+    position: fixed
+    width: 100%
+    height: gem(88)
+    top: 0
+    z-index: 6
+    &-main
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: gem(88)
+        align-items: center
+        &-logo
+            margin-left: gem(60)
+        &-nav 
+            a
+                margin: 0 gem(24)
+        &-join
+            display: flex
+            margin-right: gem(60)
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                width: gem(101)
+                height: gem(40)
+                background: #92A2F6
+                border-radius: gem(6)
+                color: #FDFCFF
+                border: 1px solid transparent
+                transition: all .3s ease
+                margin-right: gem(12)
+                &:hover
+                    background: #fff
+                    border: 1px solid #C3CBFA
+                    color: #92A2F6
+                &:nth-of-type(2)
+                    width: gem(40)
+                    height: gem(40)
+                    background: #fff
+                    border: 1px solid #C3CBFA
+                    img
+                        position: absolute
+                        transition: all .3s ease
+                    .disc_def
+                        opacity: 1
+                    .disc_hover
+                        opacity: 0
+                    &:hover
+                        background: #92A2F6
+                        border: 1px solid transparent
+                        .disc_def
+                            opacity: 0
+                        .disc_hover
+                            opacity: 1
+                span
+                    font-family: var(--sub-font)
