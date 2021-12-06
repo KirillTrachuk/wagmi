@@ -38,6 +38,8 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"npm-check-updates": "^11.8.5"
+		"npm-check-updates": "^11.8.5",
+		"slick": "^1.12.2",
+		"slick-carousel": "^1.8.1"
 	}
 }

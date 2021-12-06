@@ -231,6 +231,7 @@ button
 		width: gem(1440)
 		position: absolute
 		top: gem(-300)
+		z-index: -1
 	&-stars
 		width: gem(184)
 		position: absolute
@@ -325,27 +326,114 @@ button
 			height: gem(570)
 			border: 1px solid #9AA9F7
 			border-bottom: transparent
-			border-radius: gem(6) gem(6) 0 0
+			// border-radius: gem(6) gem(6) 0 0
 			background: rgba(255, 255, 255, 0.6)
 			margin: 0 auto
 			position: relative
-			&-list
-				display: flex
-				width: gem(920)
-				height: gem(45)
-				position: absolute
-				top: gem(-46)
-				left: gem(-1)
-				&-butt 
+			&-articles
+				display: flex !important
+				padding: gem(40) gem(28)
+				&-card
 					display: flex
-					width: gem(230)
-					height: gem(45)
-					border: 1px solid #9AA9F7
-					border-radius: gem(6) gem(6) 0 0
-					justify-content: center
-					align-items: center
-					border-bottom: 1px solid #F7FAFF
-					
+					position: relative
+					flex-direction: column
+					width: gem(280)
+					border: 1px solid #C3CBFA
+					border-radius: gem(12)
+					padding: gem(8)
+					background: #fff
+					margin-right: gem(12)
+					&-img_main
+						width: gem(264)
+						margin-bottom: gem(8)
+					h3
+						font-size: gem(14)
+						line-height: gem(18)
+						color: #2A2E4B
+						font-weight: 700
+						margin-bottom: gem(4)
+					&-short_desc
+						font-size: gem(12) !important
+						line-height: gem(20) !important
+					.data
+						display: flex
+						align-items: center
+						&-icon
+							width: gem(30)
+							height: gem(30)
+							border: 1px solid #E9E7FD
+							border-radius: gem(100)
+							margin-right: gem(4)
+							img
+								width: gem(30)
+						&-name
+							display: flex
+							flex-direction: column
+							&-top
+								font-size: gem(12)
+								line-height: gem(20)
+							&-bottom	
+								font-size: gem(10)
+								line-height: gem(13)
+					.medium
+						display: flex
+						position: absolute
+						bottom: gem(8)
+						right: gem(8)
+						p
+							color: #92A2F6
+							font-size: gem(10)
+							line-height: gem(13)
 
 
+.slick-dots
+	display: flex
+	position: absolute
+	top: gem(-45)
+	left: gem(-1)
+	li
+		display: flex
+		width: gem(230)
+		height: gem(45)
+		position: relative
+		button
+			width: gem(230)
+			height: gem(45)
+			font-size: 0px
+			background: transparent
+			border-radius: gem(6) gem(6) 0 0
+			border: none
+			// border-bottom: #d31818
+			&::before
+				color: #92A2F6
+				content: 'Articles'
+				opacity: 1
+				font-size: gem(14)
+				line-height: gem(14)
+				font-family: var(--sub-font)
+				font-weight: 600
+		&:nth-of-type(2)
+			button
+				&::before
+					content: 'Podcasts'
+					// width: gem(79)
+					// left: gem(20)
+		&:nth-of-type(3)
+			button
+				&::before
+					content: 'Twitter Threads'
+					// width: gem(53)
+		&:nth-of-type(4)
+			button
+				&::before
+					content: 'Videos'
+					// width: gem(77)
+					// left: gem(20)
+
+
+.slick-active
+	button
+		border: 1px solid #92A2F6 !important
+		border-bottom: transparent !important
+		background: #f8faff !important
 

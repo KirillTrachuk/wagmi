@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import 'slick-carousel'
 window.jQuery = $
 window.$ = $
 
@@ -8,5 +9,14 @@ window.$ = $
 document.addEventListener('DOMContentLoaded', () => {
 	
 	// Custom JS
+
+	$('.olympus-main-tabs').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		arrows: false,
+	});
 
 })
