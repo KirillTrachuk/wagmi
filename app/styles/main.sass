@@ -349,12 +349,14 @@ button
 					h3
 						font-size: gem(14)
 						line-height: gem(18)
+						font-family: var(--sub-font)
 						color: #2A2E4B
 						font-weight: 700
 						margin-bottom: gem(4)
-					&-short_desc
+					p
 						font-size: gem(12) !important
 						line-height: gem(20) !important
+						color: #6C7193
 					.data
 						display: flex
 						align-items: center
@@ -369,21 +371,53 @@ button
 						&-name
 							display: flex
 							flex-direction: column
-							&-top
-								font-size: gem(12)
-								line-height: gem(20)
-							&-bottom	
-								font-size: gem(10)
-								line-height: gem(13)
-					.medium
+							p
+								color: #2A2E4B
+								&:nth-of-type(2)
+									font-size: gem(10) !important
+									line-height: gem(13) !important
+									color: #6C7193
+					span
 						display: flex
 						position: absolute
 						bottom: gem(8)
 						right: gem(8)
-						p
-							color: #92A2F6
-							font-size: gem(10)
-							line-height: gem(13)
+						color: #92A2F6
+						font-size: gem(10)
+						line-height: gem(13)
+			&-podcasts
+				display: flex !important
+				justify-content: center
+				padding-top: gem(80)
+				position: relative
+				&-chanel
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: space-between
+					margin: 0 gem(70)
+					h3
+						font-weight: 900
+						margin-bottom: gem(8)
+					&-logo
+						width: gem(91)
+						height: gem(91)
+					p
+						font-size: gem(12)
+						line-height: gem(20)
+						font-family: var(--main-font)
+						text-align: center
+						width: gem(200)
+						margin-bottom: gem(8)
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						border-radius: gem(6)
+						width: gem(122)
+						height: gem(40)
+						border: 1px solid #C3CBFA
+						background: #FBFDFF
 
 
 .slick-dots
