@@ -3,7 +3,14 @@
     width: 100%
     height: gem(88)
     top: 0
-    z-index: 6
+    z-index: 100
+    transition: all .3s ease
+    &.back
+        background: #ffffff99
+        backdrop-filter: blur(10px)
+        opacity: 1
+        will-change: opacity
+        transition: all .3s ease
     &-main
         display: flex
         flex-direction: row
@@ -68,3 +75,11 @@
                             opacity: 1
                 span
                     font-family: var(--sub-font)
+@media all and (max-width: 1024px)
+    .header
+        &-main
+            &-logo
+                margin-left: gem(30)
+            &-nav
+                display: none
+    

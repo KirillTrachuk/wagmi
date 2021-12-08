@@ -65,6 +65,7 @@ button
 		left: 0
 	&-main
 		display: flex
+		flex-direction: row
 		&-left
 			display: flex
 			flex-direction: column
@@ -72,7 +73,6 @@ button
 			margin-left: gem(5)
 			h1
 				margin: gem(179) 0 gem(32)
-				margin-top: gem(179)
 				text-transform: uppercase
 				font-size: gem(46)
 				line-height: gem(52)
@@ -201,6 +201,8 @@ button
 		display: flex
 		position: absolute
 		width: gem(1433)
+	.bgc_team_tablet
+		display: none
 	&-main
 		display: flex
 		margin-top: gem(200)
@@ -354,6 +356,8 @@ button
 		top: gem(-230)
 		width: gem(1440)
 		z-index: 2
+	&-bgc_tablet
+		display: none
 	&-main
 		display: flex
 		position: relative
@@ -412,16 +416,21 @@ button
 			&-articles
 				display: flex !important
 				padding: gem(40) gem(28)
+				flex-wrap: wrap
+				height: gem(500)
+				overflow-y: scroll
 				&-card
 					display: flex
 					position: relative
 					flex-direction: column
 					width: gem(280)
+					height: gem(230)
 					border: 1px solid #C3CBFA
 					border-radius: gem(12)
 					padding: gem(8)
 					background: #fff
 					margin-right: gem(12)
+					margin-bottom: gem(12)
 					&-img_main
 						width: gem(264)
 						margin-bottom: gem(8)
@@ -537,6 +546,7 @@ button
 							font-weight: 700
 							font-size: gem(14)
 							line-height: gem(18)
+							color: #2A2E4B
 							width: gem(220)
 							margin: 0 gem(6) 0 0
 					&-data
@@ -559,7 +569,8 @@ button
 									font-size: gem(12)
 									line-height: gem(16)
 									margin-right: gem(4)
-								a
+									color: #2A2E4B
+								span
 									font-family: var(--main-font)
 									font-size: gem(12)
 									line-height: gem(20)
@@ -692,6 +703,8 @@ button
 		top: gem(600)
 		left: gem(200)
 		z-index: 3
+		img
+			width: gem(78)
 	&-volna
 		display: flex
 		position: absolute
@@ -780,18 +793,226 @@ button
 						opacity: 0
 					.hover
 						opacity: 1
-				// &::after
-				// 	content: url("../images/dist/signup_hover.png")
-				// 	display: flex
-				// 	opacity: 0
-				// 	width: gem(350)
-				// &:hover
-				// 	img
-				// 		opacity: 0
-				// 	&::after
-				// 		content: url("../images/dist/signup_hover.png")
-				// 		display: flex
-				// 		opacity: 1
+			.disc_bottom
+				display: flex
+				width: gem(159)
+				height: gem(159)
+				position: relative
+				justify-content: center
+				align-items: center
+				z-index: 11 
+				border-radius: gem(100)
+				top: gem(140)
+				right: gem(-210)
+				img
+					position: absolute
+					&:nth-of-type(1)
+						width: gem(159)
+						opacity: 1
+						transition: opacity .3s ease
+					&:nth-of-type(2)
+						width: gem(159)
+						opacity: 0
+						transition: opacity .3s ease
+					&:nth-of-type(3)
+						width: gem(51)
+						opacity: 0
+						transition: opacity .3s ease
+					&:nth-of-type(4)
+						width: gem(51)
+						opacity: 1
+						transition: opacity .3s ease
+				&:hover
+					img
+						&:nth-of-type(1)
+							opacity: 0
+						&:nth-of-type(2)
+							opacity: 1
+						&:nth-of-type(3)
+							opacity: 1
+						&:nth-of-type(4)
+							opacity: 0
+	&-left_title
+		display: flex
+		position: absolute
+		top: gem(320)
+		left: gem(-71)
+		h2
+			position: absolute
+			transform: rotate(-90deg)
+			color: #E9E7FD
+			z-index: 2
+			width: gem(304)
+			font-size: gem(72)
+			line-height: gem(72)
+			text-transform: uppercase
+			font-family: var(--title-font)
+			span
+				display: block
+	&-star
+		display: flex
+		position: absolute
+		top: gem(-25)
+		right: gem(350)
+		img
+			width: gem(65)
+.footer
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	&-bgc
+		position: absolute
+		width: gem(1440)
+		z-index: -1
+	&-main
+		display: flex
+		position: absolute
+		bottom: gem(-300)
+		flex-direction: column
+		align-items: center
+		img
+			width: gem(40)
+			margin-bottom: gem(13)
+		&-desc
+			display: flex
+			flex-direction: row
+			p
+				font-family: var(--main-font)
+				font-size: gem(10)
+				line-height: gem(13)
+				color: #6C7193
+				margin: 0 gem(15)
+	&-star
+		display: flex
+		position: absolute
+		left: gem(270)
+		top: gem(50)
+		img
+			width: gem(49)
+
+@media all and (max-width: 1024px)
+	.about
+		margin-bottom: gem(70)
+		&-main
+			flex-direction: column
+			&-left
+				h1
+					margin: gem(88) 0 gem(490)
+				p
+					position: relative
+					left: gem(-65)
+					width: gem(496)
+					font-size: gem(12)
+					line-height: gem(20)
+			&-right
+				right: gem(-120)
+				top: gem(100)
+				img
+					width: gem(702)
+					height: gem(576)
+					&:nth-of-type(2)
+						height: gem(200)
+						top: gem(230)
+						right: gem(220)
+		&-left_title
+			display: none
+	.business
+		.bgc_star
+			width: gem(100)
+			left: gem(30)
+			top: gem(-488)
+			transform: rotateX(180deg)
+		&-main
+			&-left
+				margin-left: gem(42)
+				h3
+					width: gem(350)
+		&-left_title
+			display: none
+	.team
+		margin-top: gem(-50)
+		.bgc_team
+			display: none
+		.bgc_team_tablet
+			display: flex
+			position: absolute
+			width: gem(768)
+		&-main
+			flex-direction: column
+			&-left
+				margin: 0 gem(0) 0 gem(49)
+				h2
+					margin-bottom: gem(24)
+			&-right
+				position: relative
+				width: gem(410)
+				right: gem(-235)
+				margin-top: gem(40)
+		&-left_title
+			display: none
+	.why_us
+		&-bgc
+			top: gem(50)
+			width: gem(768)
+		&-stars
+			display: none
+		&-left_title
+			display: none
+		h2
+			margin: gem(50) gem(-50) gem(32) 0
+		&-main
+			width: gem(648)
+			height: gem(700)
+			left: gem(-60)
+			padding: gem(48) gem(80) gem(170) gem(80)
+			justify-content: space-between
+			&-argument
+				margin-right: 0
+				&-title
+					h3
+						width: gem(220)
+	.olympus
+		&-bgc
+			display: none
+		&-bgc_tablet
+			display: flex
+			position: absolute
+			top: gem(-280)
+			width: gem(768)
+			z-index: 2
+		&-main
+			overflow-x: hidden
+			&-tabs
+				width: gem(711)
+				height: gem(707)
+				&::before
+					right: 0	
+				&-articles
+					padding: gem(24) gem(14)
+					height: gem(450)
+				&-threads
+					padding: gem(40) gem(68)
+					justify-content: space-between
+					&-card
+						margin-right: 0
+				&-videos
+					flex-direction: column
+					&-left
+						a
+							margin-bottom: gem(28)
+				
+		&-left_title
+			display: none
+		&-stars
+			top: gem(-2020)
+			left: gem(600)
+		&-volna
+			right: 0
+			display: none
+			img
+				width: gem(429)
+
 
 
 .slick-dots
@@ -811,6 +1032,7 @@ button
 			background: transparent
 			border-radius: gem(6) gem(6) 0 0
 			border: none
+			outline: none
 			// border-bottom: #d31818
 			&::before
 				color: #92A2F6
@@ -837,6 +1059,10 @@ button
 					content: 'Videos'
 					// width: gem(77)
 					// left: gem(20)
+@media all and (max-width: 1024px)
+	.slick-dots
+		li
+			width: gem(178)
 
 
 .slick-active
@@ -845,3 +1071,124 @@ button
 		border-bottom: transparent !important
 		background: #f8faff !important
 
+#head2
+	position: absolute
+	top: gem(-200)
+#head4
+	position: absolute
+	top: gem(130)
+#head5
+	position: absolute
+	top: gem(-60)
+#head6
+	position: absolute
+	top: gem(-100)
+
+.bt-menu
+	position: fixed
+	display: none
+	width: gem(40)
+	height: gem(40)
+	background: none
+	border-radius: gem(6)
+	right: gem(60)
+	z-index: 200
+	border: 1px solid #c3cbfa
+	&:after,
+	&:before
+		content: ""
+	span,
+	&::after,
+	&::before
+		backface-visibility: hidden
+		position: absolute
+		left: 0
+		right: 0
+		transition: .2s ease
+	&::before
+		width: gem(24)
+		top: gem(11)
+		margin-left: gem(7)
+		border-top: gem(2) solid #92A2F6
+	span
+		width: gem(20)
+		top: gem(18)
+		margin-left: gem(9)
+		border-top: gem(2) solid #92A2F6
+	&::after
+		width: gem(24)
+		margin-left: gem(7)
+		top: gem(25)
+		border-top: gem(2) solid #92A2F6
+	&.active
+		background: #92A2F6
+		&::before,
+		&::after
+			top: gem(20)
+			backface-visibility: hidden
+			transition: .3s ease
+		&::before
+			opacity: 0
+		span
+			border-top: gem(2) solid #ffffff
+		&::after
+			opacity: 0
+@media only screen and (max-width : 1024px)
+	.bt-menu
+		display: block
+		right: gem(20)
+		top: gem(24)
+		z-index: 102
+		opacity: 0.8
+@media only screen and (max-width : 480px)
+	.bt-menu
+		display: block
+		right: gem(20)
+		top: gem(20)
+		z-index: 101
+
+.mobile_menu
+	background: #ffffff
+	position: fixed
+	top: 0
+	left: -100%
+	height: 100vh
+	width: 100%
+	transition: .3s ease
+	z-index: 101
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	&-nav
+		margin: gem(72) 0 0 gem(60)
+		a
+			display: flex
+			font-family: var(--sub-font)
+			font-size: gem(46)
+			line-height: gem(52)
+			color: #6C7193
+			text-transform: uppercase
+			margin-bottom: gem(36)
+	&-stars
+		display: flex
+		position: absolute
+		right: gem(40)
+		top: gem(500)
+		img
+			width: gem(70)
+
+	// .nav-menu_mobile
+	// 	margin-top: gem(100)
+	// 	&-item
+	// 		text-align: center
+	// 		display: flex
+	// 		line-height: gem(20)
+	// 		font-size: gem(16)
+	// 		align-items: center
+	// 		margin-bottom: gem(31)
+	// 		color: #BAC2C8
+	// 		align-items: center
+	// 		justify-content: center
+	// 		// margin-left: gem(46)
+	&.active
+		left: 0
