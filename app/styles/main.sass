@@ -35,7 +35,6 @@ section
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
-	// visibility: hidden
 .container
 	position: relative
 	width: var(--container-width)
@@ -355,9 +354,25 @@ button
 		position: absolute
 		top: gem(-230)
 		width: gem(1440)
-		z-index: 2
+		z-index: 0
 	&-bgc_tablet
 		display: none
+	&-rect
+		display: flex
+		position: absolute
+		z-index: 0
+		width: gem(918)
+		height: gem(400)
+		justify-content: center
+		flex-direction: column
+		backdrop-filter: blur(10px)
+		background: rgba(255, 255, 255, 0.6)
+		-webkit-transform: translate3d(0,0,0)
+		opacity: 1
+		will-change: opacity
+		left: gem(260)
+		top: gem(245)
+
 	&-main
 		display: flex
 		position: relative
@@ -382,15 +397,9 @@ button
 			display: flex
 			width: gem(918)
 			height: gem(570)
-			// border: 1px solid #9AA9F7
 			border-bottom: transparent
 			border-top: 1px solid #9AA9F7
-			// border-radius: gem(6) gem(6) 0 0
 			background: rgba(255, 255, 255, 0.6)
-			backdrop-filter: blur(10px)
-			-webkit-transform: translate3d(0,0,0)
-			opacity: 1
-			will-change: opacity
 			margin: 0 auto
 			position: relative
 			&::after
@@ -1067,9 +1076,9 @@ button
 
 .slick-active
 	button
-		border: 1px solid #92A2F6 !important
+		border: gem(1) solid #92A2F6 !important
 		border-bottom: transparent !important
-		background: #f8faff !important
+		background: #fbfeff !important
 
 #head2
 	position: absolute
