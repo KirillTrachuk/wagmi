@@ -1182,7 +1182,7 @@ button
 			position: absolute
 			top: gem(-140)
 			width: gem(414)
-			z-index: 0
+			z-index: 2
 		&-rect
 			display: none
 		&-main
@@ -1195,9 +1195,23 @@ button
 					padding: gem(28) gem(11)
 					flex-direction: row
 					flex-wrap: inherit
+					justify-content: space-between
 					&-card
 						width: gem(188)	
 						margin-right: gem(0)
+						height: fit-content
+						&-img_main
+							display: none !important
+						span
+							width: gem(40)
+						h3
+							font-size: gem(12)
+				&-podcasts
+					flex-direction: column
+					padding-top: gem(40)
+					&-chanel
+						margin: 0 0 gem(28) 0
+							
 		&-stars
 			top: gem(-2220)
 			left: gem(60)
