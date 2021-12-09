@@ -1189,6 +1189,8 @@ button
 			h2
 				margin-top: 0
 				margin-bottom: gem(70)
+				font-size: gem(36)
+				line-height: gem(44)
 			&-tabs
 				width: gem(403)
 				&-articles
@@ -1210,8 +1212,24 @@ button
 					flex-direction: column
 					padding-top: gem(40)
 					&-chanel
-						margin: 0 0 gem(28) 0
-							
+						margin: 0 0 gem(28) 0	
+				&-threads
+					padding: gem(16) gem(11)
+					&-card
+						width: gem(188)
+						height: gem(111)
+						padding: gem(16) gem(14) gem(12) gem(12)
+						justify-content: space-between
+						&-head
+							h3
+								font-size: gem(12)
+								line-height: gem(16)
+						&-data
+							&-right
+								.nickname
+									span
+										display: none
+						
 		&-stars
 			top: gem(-2220)
 			left: gem(60)
@@ -1409,19 +1427,12 @@ button
 		top: gem(500)
 		img
 			width: gem(70)
-
-	// .nav-menu_mobile
-	// 	margin-top: gem(100)
-	// 	&-item
-	// 		text-align: center
-	// 		display: flex
-	// 		line-height: gem(20)
-	// 		font-size: gem(16)
-	// 		align-items: center
-	// 		margin-bottom: gem(31)
-	// 		color: #BAC2C8
-	// 		align-items: center
-	// 		justify-content: center
-	// 		// margin-left: gem(46)
 	&.active
 		left: 0
+
+@media all and (max-width: 480px)
+	.mobile_menu
+		&-nav
+			a
+				font-size: gem(20)
+				line-height: gem(26)
