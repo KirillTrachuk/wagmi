@@ -101,6 +101,8 @@ button
 					position: absolute
 					top: gem(291)
 					right: gem(265)
+			.hero_bgc_mobile
+				display: none
 	&-left_title
 		display: flex
 		position: absolute
@@ -157,7 +159,7 @@ button
 						font-weight: 700 !important
 						font-size: gem(12)
 						color: #6C7193
-						font-family: var(--sub-font)
+						font-family: var(--sub-font) !important
 			p
 				font-size: gem(12)
 				line-height: gem(20)
@@ -202,6 +204,9 @@ button
 		width: gem(1433)
 	.bgc_team_tablet
 		display: none
+	.bgc_team_mobile
+		display: none
+
 	&-main
 		display: flex
 		margin-top: gem(200)
@@ -274,6 +279,8 @@ button
 		position: absolute
 		top: gem(-300)
 		z-index: -1
+	&-bgc_mobile
+		display: none
 	&-stars
 		width: gem(184)
 		position: absolute
@@ -357,21 +364,25 @@ button
 		z-index: 0
 	&-bgc_tablet
 		display: none
+	&-bgc_mobile
+		display: none
 	&-rect
 		display: flex
 		position: absolute
 		z-index: 0
 		width: gem(918)
-		height: gem(400)
+		height: gem(500)
 		justify-content: center
 		flex-direction: column
 		backdrop-filter: blur(10px)
-		background: rgba(255, 255, 255, 0.6)
+		background: #ffffff99
 		-webkit-transform: translate3d(0,0,0)
 		opacity: 1
 		will-change: opacity
 		left: gem(260)
 		top: gem(245)
+	&-star_tablet
+		display: none
 
 	&-main
 		display: flex
@@ -398,15 +409,16 @@ button
 			width: gem(918)
 			height: gem(570)
 			border-bottom: transparent
-			border-top: 1px solid #9AA9F7
-			background: rgba(255, 255, 255, 0.6)
+			border-top: gem(1) solid #9AA9F7
+			background: rgba(255, 255, 255, 1)
 			margin: 0 auto
 			position: relative
+			z-index: 4
 			&::after
 				content: ''
 				display: flex
 				position: absolute
-				width: 1px
+				width: gem(1)
 				height: gem(410)
 				background: rgb(154,169,247)
 				background: linear-gradient(180deg, rgba(154,169,247,1) 0%, rgba(255,255,255,0) 100%)
@@ -416,7 +428,7 @@ button
 				content: ''
 				display: flex
 				position: absolute
-				width: 1px
+				width: gem(1)
 				height: gem(410)
 				background: rgb(154,169,247)
 				background: linear-gradient(180deg, rgba(154,169,247,1) 0%, rgba(255,255,255,0) 100%)
@@ -434,7 +446,7 @@ button
 					flex-direction: column
 					width: gem(280)
 					height: gem(230)
-					border: 1px solid #C3CBFA
+					border: gem(1) solid #C3CBFA
 					border-radius: gem(12)
 					padding: gem(8)
 					background: #fff
@@ -460,7 +472,7 @@ button
 						&-icon
 							width: gem(30)
 							height: gem(30)
-							border: 1px solid #E9E7FD
+							border: gem(1) solid #E9E7FD
 							border-radius: gem(100)
 							margin-right: gem(4)
 							img
@@ -514,7 +526,7 @@ button
 						width: gem(122)
 						color: #92A2F6
 						height: gem(40)
-						border: 1px solid #C3CBFA
+						border: gem(1) solid #C3CBFA
 						background: #FBFDFF
 						transition: all .3s ease
 						span
@@ -526,7 +538,7 @@ button
 						&:hover
 							background: #92A2F6
 							color: #fff
-							border: 1px solid transparent
+							border: gem(1) solid transparent
 			&-threads
 				display: flex !important
 				padding: gem(40) gem(27)
@@ -541,7 +553,7 @@ button
 					flex-direction: column
 					width: gem(280)
 					height: gem(119)
-					border: 1px solid #C3CBFA
+					border: gem(1) solid #C3CBFA
 					border-radius: gem(12)
 					padding: 0 gem(16) 0 
 					margin-right: gem(8)
@@ -630,7 +642,7 @@ button
 						width: gem(122)
 						color: #92A2F6
 						height: gem(40)
-						border: 1px solid #C3CBFA
+						border: gem(1) solid #C3CBFA
 						background: #FBFDFF
 						transition: all .3s ease
 						span
@@ -642,7 +654,7 @@ button
 						&:hover
 							background: #92A2F6
 							color: #fff
-							border: 1px solid transparent		
+							border: gem(1) solid transparent		
 				&-right
 					display: flex
 					flex-direction: column
@@ -671,7 +683,7 @@ button
 						width: gem(122)
 						color: #92A2F6
 						height: gem(40)
-						border: 1px solid #C3CBFA
+						border: gem(1) solid #C3CBFA
 						background: #FBFDFF
 						transition: all .3s ease
 						span
@@ -683,7 +695,7 @@ button
 						&:hover
 							background: #92A2F6
 							color: #fff
-							border: 1px solid transparent
+							border: gem(1) solid transparent
 	&-left_title
 		display: flex
 		position: absolute
@@ -874,6 +886,8 @@ button
 		position: absolute
 		width: gem(1440)
 		z-index: -1
+	&-bgc_tablet
+		display: none
 	&-main
 		display: flex
 		position: absolute
@@ -990,6 +1004,11 @@ button
 			top: gem(-280)
 			width: gem(768)
 			z-index: 2
+		&-rect
+			width: gem(712)
+			left: gem(28)
+			z-index: 3
+			height: gem(400)
 		&-main
 			overflow-x: hidden
 			&-tabs
@@ -1009,26 +1028,188 @@ button
 					flex-direction: column
 					&-left
 						a
-							margin-bottom: gem(28)
-				
+							margin-bottom: gem(28)	
 		&-left_title
 			display: none
 		&-stars
 			top: gem(-2020)
 			left: gem(600)
+		&-star_tablet
+			display: flex
+			position: absolute
+			width: gem(126)
+			z-index: 0
+			top: gem(650)
 		&-volna
 			right: 0
-			display: none
+			z-index: 0
+			// display: none
 			img
 				width: gem(429)
+	.hackathon
+		margin-bottom: gem(150)
+		&-main
+			flex-direction: column
+			&-left
+				h2
+					margin-bottom: gem(24)
+					span
+						width: gem(560)
+			&-right
+				width: gem(528)
+				margin-top: gem(120)
+				margin-left: gem(0)
+				justify-content: center
+				.disc_bottom
+					right: gem(-110)
+		&-left_title
+			display: none
+		&-star
+			top: gem(-2725)
+			right: gem(680)
+	.footer
+		&-bgc
+			display: none
+		&-bgc_tablet
+			display: flex
+			position: absolute
+			width: gem(768)
+		&-main
+			bottom: gem(-240)
+		&-star
+			top: 0
+			left: gem(70)
 
+@media only screen and (max-width : 480px)
+	.about
+		&-main
+			&-left
+				margin-left: 0
+				h1
+					font-size: gem(33)
+					line-height: gem(44)
+					margin: gem(88) 0 gem(387)
+					span
+						font-size: gem(33)
+						line-height: gem(44)
+				p
+					width: gem(366)
+					font-size: gem(12)
+					line-height: gem(20)
+					left: 0
+			&-right
+				right: gem(-27)
+				top: gem(188)
+				img
+					display: none
+					&:nth-of-type(2)
+						display: flex
+						width: gem(180)
+						height: gem(180)
+						top: gem(75)
+						right: gem(40)
+				.hero_bgc_mobile
+					display: flex
+					width: gem(390)
+					height: gem(361)
+	.business
+		.bgc_star
+			left: gem(20)
+			top: gem(-400)
+		&-main
+			flex-direction: column-reverse
+			&-left
+				margin-left: gem(36)
+				margin-right: 0
+				h3
+					width: gem(310)
+				p
+					width: gem(303)
+			&-right
+				margin: 0 0 gem(20) gem(140)
+	.team
+		.bgc_team_tablet
+			display: none
+		.bgc_team_mobile
+			display: flex
+			position: absolute
+			width: gem(414)
+			top: gem(100)
+		&-main
+			margin-top: gem(160)
+			&-left
+				margin: 0 0 gem(8) gem(32)
+				h2
+					font-size: gem(36)
+					line-height: gem(44)
+					width: gem(326)
+				p
+					width: gem(326)
+			&-right
+				margin-top: 0
+				right: 0
+				margin-left: gem(12)
+				width: gem(370)
+				&-item
+					margin: 0 gem(43) gem(24) 0
+	.why_us
+		margin-top: gem(100)
+		&-bgc
+			display: none
+		&-bgc_mobile
+			display: flex
+			position: absolute
+			z-index: -1
+		h2
+			font-size: gem(36)
+			line-height: gem(44)
+			margin: gem(50) 0 gem(32) 0
+			span
+				display: inline-block
+		&-main
+			width: gem(318)
+			left: 0
+			height: gem(900)
+			margin-left: gem(20)
+			padding: gem(40) gem(48) gem(170) gem(48)
+			&-argument
+				margin-bottom: gem(24)
+	.olympus
+		&-bgc_tablet
+			display: none
+		&-bgc_mobile
+			display: flex
+			position: absolute
+			top: gem(-140)
+			width: gem(414)
+			z-index: 0
+		&-rect
+			display: none
+		&-main
+			h2
+				margin-top: 0
+				margin-bottom: gem(70)
+			&-tabs
+				width: gem(403)
+				&-articles
+					padding: gem(28) gem(11)
+					flex-direction: row
+					flex-wrap: inherit
+					&-card
+						width: gem(188)	
+						margin-right: gem(0)
+		&-stars
+			top: gem(-2220)
+			left: gem(60)
 
+		
 
 .slick-dots
 	display: flex
 	position: absolute
-	top: gem(-45)
+	top: gem(-46)
 	left: gem(-1)
+	z-index: 1
 	li
 		display: flex
 		width: gem(230)
@@ -1042,7 +1223,6 @@ button
 			border-radius: gem(6) gem(6) 0 0
 			border: none
 			outline: none
-			// border-bottom: #d31818
 			&::before
 				color: #92A2F6
 				content: 'Articles'
@@ -1051,6 +1231,7 @@ button
 				line-height: gem(14)
 				font-family: var(--sub-font)
 				font-weight: 600
+		
 		&:nth-of-type(2)
 			button
 				&::before
@@ -1068,17 +1249,46 @@ button
 					content: 'Videos'
 					// width: gem(77)
 					// left: gem(20)
-@media all and (max-width: 1024px)
-	.slick-dots
-		li
-			width: gem(178)
+.slick-list
+	z-index: 4
 
 
 .slick-active
 	button
-		border: gem(1) solid #92A2F6 !important
-		border-bottom: transparent !important
-		background: #fbfeff !important
+		border: 1px solid #9eacf7 !important
+		border-bottom: #fbfeff !important
+		background: rgba(255, 255, 255, 0.6) !important
+		&::after
+			content: ''
+			display: flex
+			position: absolute
+			width: gem(228)
+			height: gem(46)
+			background: rgba(255, 255, 255, 1)
+			left: gem(1)
+			top: gem(1)
+			border-radius: gem(6) gem(6) 0 0
+			z-index: -2
+
+@media all and (max-width: 1024px)
+	.slick-dots
+		li
+			width: gem(178)
+			button
+				width: gem(178)
+	.slick-active
+		button
+			&::after
+				width: gem(176)
+@media all and (max-width: 480px)
+	.slick-dots
+		top: gem(-45)
+		li
+			width: gem(101)
+	.slick-active
+		button
+			&::after
+				width: gem(99)
 
 #head2
 	position: absolute
@@ -1102,7 +1312,7 @@ button
 	border-radius: gem(6)
 	right: gem(60)
 	z-index: 200
-	border: 1px solid #c3cbfa
+	border: gem(1) solid #c3cbfa
 	&:after,
 	&:before
 		content: ""
@@ -1153,8 +1363,8 @@ button
 	.bt-menu
 		display: block
 		right: gem(20)
-		top: gem(20)
-		z-index: 101
+		top: gem(24)
+		z-index: 102
 
 .mobile_menu
 	background: #ffffff
