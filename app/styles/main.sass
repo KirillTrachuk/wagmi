@@ -888,6 +888,8 @@ button
 		z-index: -1
 	&-bgc_tablet
 		display: none
+	&-bgc_mobile
+		display: none
 	&-main
 		display: flex
 		position: absolute
@@ -1214,6 +1216,7 @@ button
 					&-chanel
 						margin: 0 0 gem(28) 0	
 				&-threads
+					height: gem(510)
 					padding: gem(16) gem(11)
 					&-card
 						width: gem(188)
@@ -1233,7 +1236,28 @@ button
 		&-stars
 			top: gem(-2220)
 			left: gem(60)
-
+	
+	.hackathon
+		&-main
+			&-left
+				h2
+					font-size: gem(36)
+					line-height: gem(44)
+					span
+						width: gem(251)
+				img
+					width: gem(390)
+				p
+					width: gem(358)
+			&-right
+				width: gem(350)
+	.footer
+		&-bgc_tablet
+			display: none !important
+		&-bgc_mobile
+			display: flex
+			position: absolute
+			width: gem(414)
 		
 
 .slick-dots
