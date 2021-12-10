@@ -198,6 +198,7 @@ button
 				display: block
 
 .team
+	z-index: 2
 	.bgc_team
 		display: flex
 		position: absolute
@@ -381,7 +382,9 @@ button
 		will-change: opacity
 		left: gem(260)
 		top: gem(245)
-	&-star_tablet
+	.olympus-star_tablet
+		display: none
+	.olympus-volna_small_tablet
 		display: none
 
 	&-main
@@ -1011,6 +1014,21 @@ button
 			left: gem(28)
 			z-index: 3
 			height: gem(400)
+		.olympus-star_tablet
+			display: flex
+			position: absolute
+			z-index: -1
+			width: gem(126)
+			top: gem(330)
+			left: 0
+		.olympus-volna_small_tablet
+			display: flex
+			position: absolute
+			z-index: -1
+			right: 0
+			top: gem(500)
+			width: gem(450)
+			transform: rotate(346deg)
 		&-main
 			overflow-x: hidden
 			&-tabs
@@ -1024,6 +1042,7 @@ button
 				&-threads
 					padding: gem(40) gem(68)
 					justify-content: space-between
+					height: gem(660)
 					&-card
 						margin-right: 0
 				&-videos
@@ -1036,16 +1055,16 @@ button
 		&-stars
 			top: gem(-2020)
 			left: gem(600)
-		&-star_tablet
-			display: flex
-			position: absolute
-			width: gem(126)
-			z-index: 0
-			top: gem(650)
+		// &-star_tablet
+		// 	display: flex
+		// 	position: absolute
+		// 	width: gem(126)
+		// 	z-index: 0
+		// 	top: gem(650)
 		&-volna
 			right: 0
 			z-index: 0
-			// display: none
+			display: none
 			img
 				width: gem(429)
 	.hackathon
@@ -1187,6 +1206,10 @@ button
 			z-index: 2
 		&-rect
 			display: none
+		.olympus-star_tablet
+			width: gem(100)
+		.olympus-volna_small_tablet
+			width: gem(400)	
 		&-main
 			h2
 				margin-top: 0
@@ -1216,8 +1239,11 @@ button
 					&-chanel
 						margin: 0 0 gem(28) 0	
 				&-threads
-					height: gem(510)
+					height: gem(660)
 					padding: gem(16) gem(11)
+					.olympus-volna_small_tablet
+						width: gem(350)
+						right: gem(10)
 					&-card
 						width: gem(188)
 						height: gem(111)
@@ -1225,7 +1251,7 @@ button
 						justify-content: space-between
 						&-head
 							h3
-								font-size: gem(12)
+								font-size: gem(11)
 								line-height: gem(16)
 						&-data
 							&-right
@@ -1457,6 +1483,7 @@ button
 @media all and (max-width: 480px)
 	.mobile_menu
 		&-nav
+			margin: gem(120) 0 0 gem(60)
 			a
 				font-size: gem(20)
 				line-height: gem(26)
